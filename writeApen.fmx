@@ -1,0 +1,205 @@
+object writeApenFrm: TwriteApenFrm
+  Left = 0
+  Top = 0
+  Caption = 'writeApenFrm'
+  ClientHeight = 660
+  ClientWidth = 360
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnShow = FormShow
+  DesignerMasterStyle = 3
+  object ToolBar1: TToolBar
+    ControlType = Platform
+    Size.Width = 360.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object SpeedButton1: TSpeedButton
+      Align = Left
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'priortoolbutton'
+      Text = 'SpeedButton1'
+      OnClick = SpeedButton1Click
+    end
+    object Text1: TText
+      Position.X = 136.000000000000000000
+      Size.Width = 81.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      Text = #35760' '#19968' '#31508
+    end
+    object SpeedButton2: TSpeedButton
+      Align = Right
+      Position.X = 312.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'actiontoolbutton'
+      Text = 'SpeedButton2'
+    end
+  end
+  object Layout1: TLayout
+    Align = Client
+    Size.Width = 360.000000000000000000
+    Size.Height = 612.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object Rectangle1: TRectangle
+      Align = Client
+      Size.Width = 360.000000000000000000
+      Size.Height = 612.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+      object Text4: TText
+        Position.X = 16.000000000000000000
+        Position.Y = 200.000000000000000000
+        Size.Width = 80.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        Text = #35831#36873#25321#26102#38388
+      end
+      object Text2: TText
+        Position.X = 16.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 80.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        Text = #20998#31867
+      end
+      object Text3: TText
+        Position.X = 16.000000000000000000
+        Position.Y = 136.000000000000000000
+        Size.Width = 80.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        Text = #35831#36755#20837#37329#39069
+      end
+      object Text5: TText
+        Position.X = 16.000000000000000000
+        Position.Y = 272.000000000000000000
+        Size.Width = 80.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        Text = #22791#27880
+      end
+      object Edit1: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 4
+        Text = #26089#39184
+        Position.X = 112.000000000000000000
+        Position.Y = 88.000000000000000000
+        Size.Width = 113.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object TimeEdit1: TTimeEdit
+        Time = 0.667728923611111100
+        TimeFormatKind = Long
+        Position.X = 240.000000000000000000
+        Position.Y = 216.000000000000000000
+        Size.Width = 121.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 5
+      end
+      object Text7: TText
+        Position.X = 16.000000000000000000
+        Position.Y = 72.000000000000000000
+        Size.Width = 80.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        Text = #25551#36848
+      end
+      object Text8: TText
+        Position.X = 112.000000000000000000
+        Position.Y = 32.000000000000000000
+        Size.Width = 57.000000000000000000
+        Size.Height = 26.000000000000000000
+        Size.PlatformDefault = False
+        Text = #25903#20986
+        PrefixStyle = NoPrefix
+        OnClick = Text8Click
+      end
+      object Text9: TText
+        Position.X = 191.000000000000000000
+        Position.Y = 32.000000000000000000
+        Size.Width = 57.000000000000000000
+        Size.Height = 26.000000000000000000
+        Size.PlatformDefault = False
+        Text = #25910#20837
+        PrefixStyle = NoPrefix
+        OnClick = Text9Click
+      end
+    end
+    object Memo1: TMemo
+      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+      DataDetectorTypes = []
+      ImeMode = imAlpha
+      Lines.Strings = (
+        #27169#25311#25968#25454)
+      Position.X = 104.000000000000000000
+      Position.Y = 272.000000000000000000
+      Size.Width = 249.000000000000000000
+      Size.Height = 129.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Viewport.Width = 241.000000000000000000
+      Viewport.Height = 121.000000000000000000
+    end
+    object DateEdit1: TDateEdit
+      Date = 43787.000000000000000000
+      TodayDefault = True
+      Position.X = 112.000000000000000000
+      Position.Y = 216.000000000000000000
+      Size.Width = 108.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+    end
+    object Rectangle2: TRectangle
+      Fill.Color = claChartreuse
+      Position.X = 100.000000000000000000
+      Position.Y = 416.000000000000000000
+      Size.Width = 81.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+      object Text6: TText
+        Align = Contents
+        Size.Width = 81.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        Text = #20445#23384
+        OnClick = Text6Click
+      end
+    end
+    object NumberBox1: TNumberBox
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 3
+      Cursor = crIBeam
+      Position.X = 120.000000000000000000
+      Position.Y = 160.000000000000000000
+    end
+    object Rectangle3: TRectangle
+      Fill.Color = claChartreuse
+      Position.X = 240.000000000000000000
+      Position.Y = 416.000000000000000000
+      Size.Width = 81.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+      object Text10: TText
+        Align = Contents
+        Size.Width = 81.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        Text = #21462#28040
+        OnClick = Text6Click
+      end
+    end
+  end
+end

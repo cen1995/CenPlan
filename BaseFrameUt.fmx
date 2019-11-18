@@ -1,0 +1,6 @@
+object BaseFrame: TBaseFrame
+  Size.Width = 344.000000000000000000
+  Size.Height = 695.000000000000000000
+  Size.PlatformDefault = False
+  OnClick = FrameClick
+end

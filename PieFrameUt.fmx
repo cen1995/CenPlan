@@ -1,0 +1,26 @@
+inherited PieFrame: TPieFrame
+  Size.Width = 360.000000000000000000
+  Size.Height = 660.000000000000000000
+  object Button1: TButton
+    Position.X = 288.000000000000000000
+    Position.Y = 240.000000000000000000
+    TabOrder = 0
+    Text = 'Button1'
+  end
+  object Chart1: TChart
+    Position.X = 40.000000000000000000
+    Position.Y = 16.000000000000000000
+    Foot.Font.StyleExt = {00040000000200000004000000}
+    Legend.Title.Font.StyleExt = {00070000000000000004000000}
+    SubFoot.Font.StyleExt = {00040000000200000004000000}
+    Title.Text.Strings = (
+      'TChart')
+    Zoom.Brush.Kind = None
+    Zoom.Pen.Fill.Color = claSilver
+    TabOrder = 1
+    Size.Width = 257.000000000000000000
+    Size.Height = 329.000000000000000000
+    Size.PlatformDefault = False
+    ColorPaletteIndex = 13
+  end
+end
