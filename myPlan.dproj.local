@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2019/10/31 16:47:35.000.387,=D:\Delphi10\Space\Unit1.pas</Transaction>
+    <Transaction>2019/10/31 17:08:08.000.848,=D:\Delphi10\Space\Unit1.pas</Transaction>
+    <Transaction>2019/10/31 17:23:31.000.659,=D:\Delphi10\Space\Unit2.pas</Transaction>
+    <Transaction>2019/11/01 09:49:28.000.909,=D:\Delphi10\Space\Unit1.pas</Transaction>
+    <Transaction>2019/11/01 10:45:28.000.403,D:\Delphi10\Space\myplan\myPlanMain.fmx=D:\Delphi10\Space\Unit1.fmx</Transaction>
+    <Transaction>2019/11/01 10:45:28.000.403,D:\Delphi10\Space\myplan\myPlanMain.pas=D:\Delphi10\Space\Unit1.pas</Transaction>
+    <Transaction>2019/11/01 10:45:38.000.964,D:\Delphi10\Space\myplan\myPlan.dproj=D:\Delphi10\Space\Project1.dproj</Transaction>
+    <Transaction>2019/11/01 11:11:19.000.718,=D:\Delphi10\Space\myplan\Unit2.pas</Transaction>
+    <Transaction>2019/11/01 11:12:40.000.098,D:\Delphi10\Space\myplan\writeApen.fmx=D:\Delphi10\Space\myplan\Unit2.fmx</Transaction>
+    <Transaction>2019/11/01 11:12:40.000.098,D:\Delphi10\Space\myplan\writeApen.pas=D:\Delphi10\Space\myplan\Unit2.pas</Transaction>
+    <Transaction>2019/11/02 22:29:44.000.940,=D:\Delphi10\Space\myplan\Unit1.pas</Transaction>
+    <Transaction>2019/11/02 22:30:34.000.844,D:\Delphi10\Space\myplan\DataUt.pas=D:\Delphi10\Space\myplan\Unit1.pas</Transaction>
+    <Transaction>2019/11/02 22:30:34.000.844,D:\Delphi10\Space\myplan\DataUt.dfm=D:\Delphi10\Space\myplan\Unit1.dfm</Transaction>
+    <Transaction>2019/11/15 11:32:25.000.247,=D:\Delphi10\Space\myplan\Unit2.pas</Transaction>
+    <Transaction>2019/11/15 11:32:42.000.386,D:\Delphi10\Space\myplan\Unit2.fmx=D:\Delphi10\Space\myplan\loginUt.fmx</Transaction>
+    <Transaction>2019/11/15 11:32:42.000.386,D:\Delphi10\Space\myplan\Unit2.pas=D:\Delphi10\Space\myplan\loginUt.pas</Transaction>
+    <Transaction>2019/11/16 19:43:39.000.896,=D:\Delphi10\Space\myplan\Unit2.pas</Transaction>
+    <Transaction>2019/11/16 19:44:09.000.736,D:\Delphi10\Space\myplan\Unit2.pas=D:\Delphi10\Space\myplan\mainUt.pas</Transaction>
+    <Transaction>2019/11/16 19:44:09.000.736,D:\Delphi10\Space\myplan\Unit2.fmx=D:\Delphi10\Space\myplan\mainUt.fmx</Transaction>
+    <Transaction>2019/11/16 19:53:33.000.875,=D:\Delphi10\Space\myplan\Unit1.pas</Transaction>
+    <Transaction>2019/11/16 19:54:25.000.335,D:\Delphi10\Space\myplan\Unit1.pas=D:\Delphi10\Space\myplan\accountUt.pas</Transaction>
+    <Transaction>2019/11/16 19:54:25.000.335,D:\Delphi10\Space\myplan\Unit1.fmx=D:\Delphi10\Space\myplan\accountUt.fmx</Transaction>
+    <Transaction>2019/11/16 20:27:51.000.801,=D:\Delphi10\Space\myplan\Unit1.pas</Transaction>
+    <Transaction>2019/11/16 20:28:15.000.467,D:\Delphi10\Space\myplan\Unit1.pas=D:\Delphi10\Space\myplan\BaseFrameUt.pas</Transaction>
+    <Transaction>2019/11/16 20:28:15.000.467,D:\Delphi10\Space\myplan\Unit1.fmx=D:\Delphi10\Space\myplan\BaseFrameUt.fmx</Transaction>
+    <Transaction>2019/11/16 20:28:55.000.079,=D:\Delphi10\Space\myplan\Unit1.pas</Transaction>
+    <Transaction>2019/11/16 20:30:38.000.933,D:\Delphi10\Space\myplan\Unit1.fmx=D:\Delphi10\Space\myplan\HistoryFrameUt.fmx</Transaction>
+    <Transaction>2019/11/16 20:30:38.000.933,D:\Delphi10\Space\myplan\Unit1.pas=D:\Delphi10\Space\myplan\HistoryFrameUt.pas</Transaction>
+    <Transaction>2019/11/16 20:32:59.000.830,=D:\Delphi10\Space\myplan\Unit1.pas</Transaction>
+    <Transaction>2019/11/16 20:33:23.000.106,D:\Delphi10\Space\myplan\Unit1.fmx=D:\Delphi10\Space\myplan\PieFrameUt.fmx</Transaction>
+    <Transaction>2019/11/16 20:33:23.000.106,D:\Delphi10\Space\myplan\Unit1.pas=D:\Delphi10\Space\myplan\PieFrameUt.pas</Transaction>
+    <Transaction>2019/11/16 20:33:58.000.669,=D:\Delphi10\Space\myplan\Unit1.pas</Transaction>
+    <Transaction>2019/11/16 20:34:14.000.369,D:\Delphi10\Space\myplan\Unit1.pas=D:\Delphi10\Space\myplan\SettingFrameUt.pas</Transaction>
+    <Transaction>2019/11/16 20:34:14.000.369,D:\Delphi10\Space\myplan\Unit1.fmx=D:\Delphi10\Space\myplan\SettingFrameUt.fmx</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5" Android="a67d960d9805"/>
+	</ActiveMobileDevice>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="android-support-v4.dex.jar"/>
+    <File Path="cloud-messaging.dex.jar"/>
+    <File Path="com-google-android-gms.play-services-ads-base.17.2.0.dex.jar"/>
+    <File Path="com-google-android-gms.play-services-ads-identifier.16.0.0.dex.jar"/>
+    <File Path="com-google-android-gms.play-services-ads-lite.17.2.0.dex.jar"/>
+    <File Path="com-google-android-gms.play-services-ads.17.2.0.dex.jar"/>
+    <File Path="com-google-android-gms.play-services-analytics-impl.16.0.8.dex.jar"/>
+    <File Path="com-google-android-gms.play-services-analytics.16.0.8.dex.jar"/>
+    <File Path="com-google-android-gms.play-services-base.16.0.1.dex.jar"/>
+    <File Path="com-google-android-gms.play-services-basement.16.2.0.dex.jar"/>
+    <File Path="com-google-android-gms.play-services-gass.17.2.0.dex.jar"/>
+    <File Path="com-google-android-gms.play-services-identity.16.0.0.dex.jar"/>
+    <File Path="com-google-android-gms.play-services-maps.16.1.0.dex.jar"/>
+    <File Path="com-google-android-gms.play-services-measurement-base.16.4.0.dex.jar"/>
+    <File Path="com-google-android-gms.play-services-measurement-sdk-api.16.4.0.dex.jar"/>
+    <File Path="com-google-android-gms.play-services-stats.16.0.1.dex.jar"/>
+    <File Path="com-google-android-gms.play-services-tagmanager-v4-impl.16.0.8.dex.jar"/>
+    <File Path="com-google-android-gms.play-services-tasks.16.0.1.dex.jar"/>
+    <File Path="com-google-android-gms.play-services-wallet.16.0.1.dex.jar"/>
+    <File Path="com-google-firebase.firebase-analytics.16.4.0.dex.jar"/>
+    <File Path="com-google-firebase.firebase-common.16.1.0.dex.jar"/>
+    <File Path="com-google-firebase.firebase-iid-interop.16.0.1.dex.jar"/>
+    <File Path="com-google-firebase.firebase-iid.17.1.1.dex.jar"/>
+    <File Path="com-google-firebase.firebase-measurement-connector.17.0.1.dex.jar"/>
+    <File Path="com-google-firebase.firebase-messaging.17.5.0.dex.jar"/>
+    <File Path="fmx.dex.jar"/>
+    <File Path="google-play-billing.dex.jar"/>
+    <File Path="google-play-licensing.dex.jar"/>
+    <File Path="accountUt.pas"/>
+    <File Path="accountUt.fmx"/>
+    <File Path="BaseFrameUt.pas"/>
+    <File Path="BaseFrameUt.fmx"/>
+    <File Path="DataUt.pas"/>
+    <File Path="DataUt.dfm"/>
+    <File Path="HistoryFrameUt.pas"/>
+    <File Path="HistoryFrameUt.fmx"/>
+    <File Path="loginUt.pas"/>
+    <File Path="loginUt.fmx"/>
+    <File Path="mainUt.pas"/>
+    <File Path="mainUt.fmx"/>
+    <File Path="myPlanMain.pas"/>
+    <File Path="myPlanMain.fmx"/>
+    <File Path="PieFrameUt.pas"/>
+    <File Path="PieFrameUt.fmx"/>
+    <File Path="SettingFrameUt.pas"/>
+    <File Path="SettingFrameUt.fmx"/>
+    <File Path="writeApen.pas"/>
+    <File Path="writeApen.fmx"/>
+  </ProjectSortOrder>
+</BorlandProject>
