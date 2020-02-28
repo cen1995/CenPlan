@@ -74,7 +74,9 @@ var
   Form1: TForm1;
 
 implementation
- uses writeApen,DataUt;
+ uses
+
+ writeApen,DataUt;
 {$R *.fmx}
 
 procedure TForm1.Circle3DblClick(Sender: TObject);

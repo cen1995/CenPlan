@@ -45,7 +45,8 @@ object myPlanDataModule: TmyPlanDataModule
       '    bz          TEXT     NOT NULL,'
       '    del         INT      NOT NULL,'
       '    create_time DATETIME,'
-      '    plan_time   DATETIME'
+      '    plan_time   DATETIME,'
+      '    msid INTEGER Default 0'
       ');'
       'CREATE TABLE if not exists MonthsSetting ('
       '    id          INTEGER  PRIMARY KEY AUTOINCREMENT,'
@@ -69,8 +70,7 @@ object myPlanDataModule: TmyPlanDataModule
       '    del         INT     NOT NULL,'
       '    create_time TEXT    NOT NULL,'
       '    plan_time   TEXT    NOT NULL'
-      ');'
-      '')
+      ');')
     Left = 200
     Top = 112
   end

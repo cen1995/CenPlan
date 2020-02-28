@@ -64,8 +64,12 @@ var sqlStr: String;
 begin
   //   2019
   ListBox1.Items.Clear;
-  sqlStr := 'select year,month,sum(budget) as budget,sum(income) as income ,sum(expend) as expend from MonthsSetting '+
-         ' where del=0 and year=''2019'' group by month';
+  //sqlStr := 'select year,month,sum(budget) as budget,sum(income) as income ,sum(expend) as expend from MonthsSetting '+
+  //       ' where del=0 and year=''2019'' group by month';
+  sqlStr := 'select m.year,m.month,m.budget,sum(p.money) as expend,p.classify from  Plan p '+
+            ' left join MonthsSetting m ' +
+            ' where m.del = 0 and p.del = 0 and p.classify = 1 and m.id = p.msid group by m.year,m.month' +
+            ' order by year desc ';
   with  myPlanDataModule.myPlanQuery1 do
   begin
      SQL.Clear;
@@ -80,7 +84,7 @@ begin
         AItem.StylesData['Text1Style'] := FieldByName('month').AsString+'月';
         AItem.StylesData['Text2Style'] := FieldByName('year').AsString+'年';
         AItem.StylesData['Text3Style'] := FieldByName('budget').AsString;
-        AItem.StylesData['Text4Style'] := '收入'+FieldByName('income').AsString;
+        AItem.StylesData['Text4Style'] := '收入'+'--';
         AItem.StylesData['Text5Style'] := '结余';
         AItem.StylesData['Text6Style'] := '支出'+FieldByName('expend').AsString;
         Next;

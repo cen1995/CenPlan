@@ -18,11 +18,14 @@ type
     procedure DataModuleCreate(Sender: TObject);
     function toDayPay(): String;  //今日支出
     function toMonthExpendAndIncome(Out expend:double;Out income:double): string;  //本月支出和收入
+
   private
     { Private declarations }
     procedure MonthsSettingInit;//预算表初始化,数据库初始化或者每一个月起始需要新增一条数据
-    //把Plan中的月收入，支出的数据同步到MonthsSetting中
-    procedure PlanToMonthData;
+
+    procedure PlanToMonthData;  //把Plan中的月收入，支出的数据同步到MonthsSetting中
+
+    procedure MonthsUpdate(value: double; types : Integer);//1预算2支出3收入 每往日计划表里插入一条数据 ，必须再月计划表中累加统计
   public
     { Public declarations }
     procedure writeLog(logStr:string);
@@ -38,12 +41,17 @@ implementation
 {$R *.dfm}
 
 procedure TmyPlanDataModule.DataModuleCreate(Sender: TObject);
+var sPath,s,ss: String;
 begin
    {$IFDEF Android}
-   BaseConnection.Params.Values['DataBase'] := TPath.Combine(TPath.GetDocumentsPath,'cenPlan.sdb');
+    sPath := TPath.GetDownloadsPath;
+    s := TPath.GetHomePath;
+    ss := TPath.GetTempPath;
+    BaseConnection.Params.Values['DataBase'] := TPath.Combine(sPath,'cenPlan.sdb');
    {$ENDIF}
    {$IFDEF MSWINDOWS}
-   BaseConnection.Params.Values['DataBase'] := TPath.Combine('\..\','cenPlan.sdb');
+    BaseConnection.Params.Values['DataBase'] := TPath.Combine('\..\','cenPlan.sdb');
+  //BaseConnection.Params.Values['DataBase'] := TPath.Combine('C:\Users\76367\Desktop\新建文件夹','cenPlan.sdb');
    {$ENDIF}
    try
       BaseConnection.Connected := True;
@@ -134,8 +142,8 @@ procedure TmyPlanDataModule.MonthsSettingInit;
 var sqlStr:String;
     toMonth,toYear,toTime:string;
 begin
-   toMonth := FormatDateTime('mm',now);
-   toYear  := FormatDateTime('yyyy',now);
+  toMonth := FormatDateTime('mm',now);
+   toYear := FormatDateTime('yyyy',now);
    toTime := FormatDateTime('yyyy-mm-dd HH:mm:ss',now);
    sqlStr := 'select * from MonthsSetting where del=0 and year=''%0:S'' and month=''%1:S''' ;
    sqlStr := Format(sqlStr,[toYear,toMonth]);
@@ -170,6 +178,34 @@ sqlStr := 'select year,month,sum(budget) as budget,sum(income) as income ,sum(ex
 
        end;
      end;
+end;
+
+procedure TmyPlanDataModule.MonthsUpdate(value: Double; types: Integer);
+var sqlStr: string;
+    toMonth,toYear,toTime:string;
+begin
+   toMonth := FormatDateTime('mm',now);
+   toYear  := FormatDateTime('yyyy',now);
+   toTime  := FormatDateTime('yyyy-mm-dd HH:mm:ss',now);
+   case types of
+       1: begin   //预算数据有变
+            sqlStr := 'Update MonthsSetting Set budget = %0:D Where year = ''%1:S'' and month = ''%2:S''';
+          end;
+       2: begin  //支出数据 新增
+            sqlStr := 'Update MonthsSetting Set expend = expend+%0:D Where year = ''%1:S'' and month = ''%2:S''';
+          end;
+       3: begin  //收入数据 新增
+            sqlStr := 'Update MonthsSetting Set income = income+%0:D Where year = ''%1:S'' and month = ''%2:S''';
+          end;
+   end;
+
+   with myPlanQuery1 do
+   begin
+     SQL.Clear;
+     SQL.Add(sqlStr);
+     ExecSQL;
+   end;
+
 end;
 procedure TmyPlanDataModule.writeLog(logStr: string);
 begin

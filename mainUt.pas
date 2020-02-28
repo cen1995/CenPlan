@@ -27,6 +27,7 @@ type
     t2: TText;
     ImageList1: TImageList;
     ImageList2: TImageList;
+    Rectangle2: TRectangle;
     procedure frameClick(Sender: TObject);
     procedure frameShow(iframe: byte);
     procedure FormCreate(Sender: TObject);
@@ -45,7 +46,12 @@ var
   SettingFrame: TSettingFrame;
   lastFrame: Byte;
 implementation
-
+ uses
+    {$IFDEF ANDROID}
+     Androidapi.Helpers,
+      Androidapi.JNI.GraphicsContentViewText,
+ {$ENDIF}
+ Math,DateUtils;
 {$R *.fmx}
 
 procedure TmainForm.FormCreate(Sender: TObject);
@@ -54,6 +60,8 @@ begin
     HistoryFrame := THistoryFrame.Create(nil);
         PieFrame := TPieFrame.Create(nil);
     SettingFrame := TSettingFrame.Create(nil);
+    //
+    frameClick(Self.r1);
 end;
 
 procedure TmainForm.frameClick(Sender: TObject);
@@ -61,6 +69,8 @@ var
   I: Integer;
   a: TSizeF;
   s:string;
+ // Ia : array[0..3] of String = ('t1','t2','t3','t4');
+  ft : TText;
 begin
    //
      a.cx := 32;
@@ -71,28 +81,27 @@ begin
        begin
          // TRectangle(Sender).Fill.Bitmap.Bitmap.CreateFromFile('D:\ÏÂÔØ×ÊÔ´\icon\wx\16\tuichu.png');
           TRectangle(Sender).Fill.Bitmap.Bitmap := ImageList1.Bitmap(a,I-1);
-
+          ft := findComponent('t'+I.ToString) As TText;
+          ft.TextSettings.FontColor := TAlphaColorRec.Black;
        end
        else
        begin
           case I of
             1 : begin
                   r1.Fill.Bitmap.Bitmap := ImageList2.Bitmap(a,I-1);
-
-                 // t1.TextSettings.FontColor := TAlphaColorRec.Yellow;
+                  t1.TextSettings.FontColor := TAlphaColorRec.Gray;
                 end;
             2 : begin
                   r2.Fill.Bitmap.Bitmap := ImageList2.Bitmap(a,I-1);
-
-                //  t2.TextSettings.FontColor := TAlphaColorRec.Yellow;
+                  t2.TextSettings.FontColor := TAlphaColorRec.Gray;
                 end;
             3 : begin
                   r3.Fill.Bitmap.Bitmap := ImageList2.Bitmap(a,I-1);
-                 // t3.TextSettings.FontColor := TAlphaColorRec.Yellow;
+                  t3.TextSettings.FontColor := TAlphaColorRec.Gray;
                 end;
             4 : begin
                   r4.Fill.Bitmap.Bitmap := ImageList2.Bitmap(a,I-1);
-                //  t4.TextSettings.FontColor := TAlphaColorRec.Yellow;
+                  t4.TextSettings.FontColor := TAlphaColorRec.Gray;
                 end;
           end;
        end;
@@ -116,7 +125,7 @@ begin
 end;
 
 
-procedure TmainForm.frameShow(iframe: Byte);
+procedure TmainForm.frameShow(iframe: Byte);         //TODO
 begin
   //bodyLayout.Children.
   case iframe of
@@ -166,6 +175,9 @@ begin
     end;
 
   end;
+  {$IFDEF ANDROID}
+  TAndroidHelper.Activity.getWindow.setStatusBarColor(TJColor.JavaClass.RED);
+  {$ENDIF}
 end;
 procedure TmainForm.Rectangle1Click(Sender: TObject);
 begin

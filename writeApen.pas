@@ -70,8 +70,9 @@ begin
 end;
 
 procedure TwriteApenFrm.Text6Click(Sender: TObject);
-var sqlStr : String;checked:Integer;
-    dateStr,timeStr:string;
+var sqlStr : String;
+   checked,msid:Integer;
+    dateStr,timeStr,toyear,tomonth:string;
 begin
 //
   checked := 0;
@@ -83,11 +84,35 @@ begin
  if Text8.Tag=1 then     //支出
   checked := 1;
 
- sqlStr := 'insert into Plan (name,classify,money,bz,del,plan_time,create_time)'+
- 'values(''%0:S'',%1:D,%2:D,''%3:S'',%4:D,''%5:S'',''%6:S'')';
+ //新增之前取msid
+  toyear := FormatDateTime('yyyy',DateEdit1.DateTime);
+  tomonth := FormatDateTime('mm',DateEdit1.DateTime);
+
+  sqlStr := 'select id from MonthsSetting where del = 0 and year = ''%0:S'' and month = ''%1:S''';
+  sqlStr := Format(sqlStr,[toyear,tomonth]);
+  with myPlanDataModule.myPlanQuery1 do
+  begin
+    SQl.Clear;
+    SQL.Add(sqlStr);
+    Open;
+    if RecordCount <= 0 then
+    begin
+      msid := 0;
+    end
+    else
+    begin
+      msid := FieldByName('id').AsInteger;
+    end;
+  end;
+
+
+
+ sqlStr := 'insert into Plan (name,classify,money,bz,del,plan_time,create_time,msid)'+
+           'values(''%0:S'',%1:D,%2:D,''%3:S'',%4:D,''%5:S'',''%6:S'',%7:D)';
  dateStr := FormatDateTime('yyyy-mm-dd',DateEdit1.DateTime);
  timeStr := FormatDateTime('HH:mm:ss',TimeEdit1.DateTime);
- sqlStr := Format(sqlStr,[Edit1.Text,checked,NumberBox1.Text.ToInteger,Memo1.Text,0,dateStr+' '+TimeEdit1.Text,FormatDateTime('yyyy-mm-dd HH:mm:ss',now)]);
+ sqlStr := Format(sqlStr,
+ [Edit1.Text,checked,NumberBox1.Text.ToInteger,Memo1.Text,0,dateStr+' '+timeStr,FormatDateTime('yyyy-mm-dd HH:mm:ss',now),msid]);
  myPlanDataModule.myPlanQuery1.SQL.Clear;
  myPlanDataModule.myPlanQuery1.SQL.Add(sqlStr);
  myPlanDataModule.myPlanQuery1.ExecSQL;

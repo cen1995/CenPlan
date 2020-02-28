@@ -18,7 +18,7 @@
         android:theme="%theme%"
         android:hardwareAccelerated="%hardwareAccelerated%"
         android:resizeableActivity="false">
-
+       <meta-data android:name="android.max_aspect" android:value="2.1" />
         <%provider%>
         <%application-meta-data%>
         <%uses-libraries%>

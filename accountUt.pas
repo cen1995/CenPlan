@@ -101,6 +101,7 @@ procedure TaccountFrame.getList;
 var sqlStr,nowTime:string;
     AItem : TListViewItem;
     PID:Integer;
+  I: Integer;
 begin
   Randomize;
   nowTime := FormatDateTime('yyyy-mm-dd',now);
@@ -108,6 +109,7 @@ begin
   AItem.Data['Text3'] := nowTime;
   sqlStr := 'select * from Plan where classify=1 and del=0 And plan_time between ''%0:S'' And ''%1:S''';
   sqlStr := Format(sqlStr,[nowTime+' 00:00:00',nowTime+' 23:59:59']);
+
   with myPlanDataModule.myPlanQuery1 do
   begin
     SQL.Clear;

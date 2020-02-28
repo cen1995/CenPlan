@@ -16,6 +16,7 @@ object writeApenFrm: TwriteApenFrm
     Size.Height = 48.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 0
+    TintColor = claRed
     object SpeedButton1: TSpeedButton
       Align = Left
       Size.Width = 48.000000000000000000
@@ -147,11 +148,11 @@ object writeApenFrm: TwriteApenFrm
       Size.Height = 129.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 1
-      Viewport.Width = 241.000000000000000000
-      Viewport.Height = 121.000000000000000000
+      Viewport.Width = 249.000000000000000000
+      Viewport.Height = 129.000000000000000000
     end
     object DateEdit1: TDateEdit
-      Date = 43787.000000000000000000
+      Date = 43889.000000000000000000
       TodayDefault = True
       Position.X = 112.000000000000000000
       Position.Y = 216.000000000000000000
